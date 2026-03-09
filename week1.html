@@ -33,17 +33,43 @@
             border: none;
         }
         
-        .canva-placeholder {
+        .canva-embed-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #f1f5f9;
+        }
+        
+        .canva-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .canva-link-card {
             background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
             border: 3px dashed #6366f1;
             border-radius: 12px;
-            min-height: 400px;
+            min-height: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .canva-link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2), 0 10px 10px -5px rgba(99, 102, 241, 0.1);
+            border-color: #4f46e5;
         }
         
         .bg-white20 {
@@ -110,7 +136,7 @@
             </a>
         </div>
         
-        <!-- Canva Embed Section -->
+        <!-- Canva Embed Section with Link Option -->
         <section class="mb-12">
             <div class="flex items-center space-x-3 mb-4">
                 <div class="bg-indigo-100 p-2 rounded-lg">
@@ -119,19 +145,65 @@
                 <h2 class="text-2xl font-bold text-slate-800">Lesson Proper</h2>
             </div>
             
-            <div class="bg-white rounded-2xl shadow-lg p-2">
-                <!-- CANVA EMBED PLACEHOLDER -->
-                <div class="canva-placeholder">
-                    <i data-lucide="image" class="w-16 h-16 text-indigo-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-indigo-900 mb-2">Canva Lesson Embed</h3>
-                    <p class="text-indigo-700 mb-4 max-w-md">Paste your Canva embed code here. Students will scroll through your designed lesson like a digital book.</p>
-                    <div class="bg-white50 p-4 rounded-lg text-left w-full max-w-2xl overflow-x-auto">
-                        <code class="text-sm text-indigo-800">
-                            &lt;iframe src="YOUR_CANVA_LINK_HERE" ...&gt;&lt;/iframe&gt;
-                        </code>
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <!-- Option 1: Direct Canva Embed (for iframe code) -->
+                <div class="mb-8">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="bg-green-100 p-1 rounded-full">
+                            <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-700">Option 1: Embed Canva Design</h3>
                     </div>
+                    
+                    <div class="canva-embed-container mb-3">
+                        <!-- PASTE YOUR CANVA IFRAME CODE HERE -->
+                        <iframe 
+                            src="YOUR_CANVA_EMBED_LINK_HERE" 
+                            allowfullscreen="allowfullscreen" 
+                            allow="fullscreen">
+                        </iframe>
+                        <!-- END CANVA IFRAME CODE -->
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        <i data-lucide="info" class="w-3 h-3 inline"></i> 
+                        Replace the src URL with your Canva design's embed link
+                    </p>
                 </div>
-                <!-- END CANVA PLACEHOLDER -->
+                
+                <!-- Option 2: Link Card (for clickable link) -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="bg-blue-100 p-1 rounded-full">
+                            <i data-lucide="link-2" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-700">Option 2: Open in Canva</h3>
+                    </div>
+                    
+                    <a href="YOUR_CANVA_LINK_HERE" target="_blank" class="canva-link-card block">
+                        <i data-lucide="palette" class="w-16 h-16 text-indigo-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-2">Open Canva Lesson</h3>
+                        <p class="text-indigo-700 mb-4 max-w-md">Click here to open the interactive lesson in Canva</p>
+                        <span class="inline-flex items-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-full font-bold hover:bg-indigo-700 transition">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                            <span>OPEN IN CANVA</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Instructions for teachers -->
+                <div class="mt-6 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+                    <h4 class="font-bold text-yellow-800 mb-2 flex items-center">
+                        <i data-lucide="info" class="w-5 h-5 mr-1"></i>
+                        How to get your Canva embed link:
+                    </h4>
+                    <ol class="text-sm text-yellow-700 list-decimal list-inside space-y-1">
+                        <li>Open your Canva design</li>
+                        <li>Click "Share" in the top right corner</li>
+                        <li>Click "More" and select "Embed"</li>
+                        <li>Copy the iframe code or the link</li>
+                        <li>Paste it in the space above</li>
+                    </ol>
+                </div>
             </div>
         </section>
         

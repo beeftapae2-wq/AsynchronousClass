@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 2: Character Traits - Grade 7 English Q1</title>
+    <title>Lesson 2: Character & Characterization - Grade 7 English Q1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -47,6 +47,14 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             border-color: #3b82f6;
         }
+        
+        .steal-card {
+            transition: all 0.3s ease;
+        }
+        .steal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -71,8 +79,8 @@
             <div class="inline-block p-3 bg-white20 rounded-full mb-4">
                 <i data-lucide="users" class="w-12 h-12"></i>
             </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Lesson 2: Character Traits</h1>
-            <p class="text-lg opacity-90">Understanding Direct and Indirect Characterization</p>
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Lesson 2: Character & Characterization</h1>
+            <p class="text-lg opacity-90">Understanding Protagonist, Antagonist, Supporting Characters, Direct vs. Indirect Characterization</p>
         </div>
     </header>
     
@@ -85,7 +93,7 @@
                     <i data-lucide="clipboard-list" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-lg text-blue-800 mb-1">📝 Pre-Test</h3>
-                <p class="text-sm text-blue-600 mb-3">Check what you already know</p>
+                <p class="text-sm text-blue-600 mb-3">Check what you already know about characters</p>
                 <span class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Click to Start</span>
             </a>
 
@@ -95,7 +103,7 @@
                     <i data-lucide="edit-3" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-lg text-purple-800 mb-1">📊 Assessment</h3>
-                <p class="text-sm text-purple-600 mb-3">Take the lesson quiz</p>
+                <p class="text-sm text-purple-600 mb-3">Test your understanding of characterization</p>
                 <span class="inline-block bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Click to Start</span>
             </a>
 
@@ -105,7 +113,7 @@
                     <i data-lucide="message-circle" class="w-8 h-8"></i>
                 </div>
                 <h3 class="font-bold text-lg text-teal-800 mb-1">💭 Reflection</h3>
-                <p class="text-sm text-teal-600 mb-3">Share your thoughts</p>
+                <p class="text-sm text-teal-600 mb-3">Share your thoughts on characters in stories</p>
                 <span class="inline-block bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Click to Start</span>
             </a>
         </div>
@@ -132,73 +140,147 @@
             <p class="text-center text-sm text-slate-500 mt-2">Click above to access all your activities in Google Classroom</p>
         </section>
         
+        <!-- Quick Reference: Character Roles -->
+        <section class="mb-8 bg-indigo-50 rounded-2xl p-6 border-2 border-indigo-200">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="bg-indigo-500 text-white p-2 rounded-lg">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-indigo-900">Character Roles</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                    <h3 class="font-bold text-lg text-green-700 mb-2">🦸 Protagonist</h3>
+                    <p class="text-slate-700 text-sm">The main character the story follows. Usually the hero or the one we root for.</p>
+                    <p class="text-xs text-slate-500 mt-2">Example: Mulan in <i>Mulan</i></p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg text-red-700 mb-2">👿 Antagonist</h3>
+                    <p class="text-slate-700 text-sm">The character or force that opposes the protagonist. Creates conflict.</p>
+                    <p class="text-xs text-slate-500 mt-2">Example: Shan Yu in <i>Mulan</i></p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-yellow-500">
+                    <h3 class="font-bold text-lg text-yellow-700 mb-2">👥 Supporting</h3>
+                    <p class="text-slate-700 text-sm">Characters who help, guide, or add depth to the story.</p>
+                    <p class="text-xs text-slate-500 mt-2">Example: Mushu in <i>Mulan</i></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- STEAL Method Reference -->
+        <section class="mb-8 bg-amber-50 rounded-2xl p-6 border-2 border-amber-200">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="bg-amber-500 text-white p-2 rounded-lg">
+                    <i data-lucide="search" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-amber-900">STEAL Method: Indirect Characterization</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-3">
+                <div class="steal-card bg-white p-3 rounded-xl text-center hover:bg-red-50">
+                    <span class="font-black text-2xl text-red-500">S</span>
+                    <h3 class="font-bold text-sm">Speech</h3>
+                    <p class="text-xs text-slate-600">What they say & how</p>
+                </div>
+                <div class="steal-card bg-white p-3 rounded-xl text-center hover:bg-orange-50">
+                    <span class="font-black text-2xl text-orange-500">T</span>
+                    <h3 class="font-bold text-sm">Thoughts</h3>
+                    <p class="text-xs text-slate-600">What they think</p>
+                </div>
+                <div class="steal-card bg-white p-3 rounded-xl text-center hover:bg-yellow-50">
+                    <span class="font-black text-2xl text-yellow-500">E</span>
+                    <h3 class="font-bold text-sm">Effect</h3>
+                    <p class="text-xs text-slate-600">How others react</p>
+                </div>
+                <div class="steal-card bg-white p-3 rounded-xl text-center hover:bg-green-50">
+                    <span class="font-black text-2xl text-green-500">A</span>
+                    <h3 class="font-bold text-sm">Actions</h3>
+                    <p class="text-xs text-slate-600">What they do</p>
+                </div>
+                <div class="steal-card bg-white p-3 rounded-xl text-center hover:bg-blue-50">
+                    <span class="font-black text-2xl text-blue-500">L</span>
+                    <h3 class="font-bold text-sm">Looks</h3>
+                    <p class="text-xs text-slate-600">Appearance</p>
+                </div>
+            </div>
+            
+            <div class="mt-4 bg-white p-3 rounded-lg">
+                <h3 class="font-bold text-sm mb-1">📌 Direct vs. Indirect</h3>
+                <p class="text-xs text-slate-600"><span class="font-bold text-blue-600">Direct:</span> Author TELLS us ("Maria was kind.")</p>
+                <p class="text-xs text-slate-600"><span class="font-bold text-green-600">Indirect:</span> Author SHOWS us using STEAL</p>
+            </div>
+        </section>
+        
         <!-- Video Resources -->
         <section class="mb-12">
             <div class="flex items-center space-x-3 mb-6">
                 <div class="bg-red-100 p-2 rounded-lg">
                     <i data-lucide="youtube" class="w-6 h-6 text-red-600"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-slate-800">Video Resources</h2>
+                <h2 class="text-2xl font-bold text-slate-800">Character Videos</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Video 1 -->
+                <!-- Video 1: Protagonist vs Antagonist -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
-                                title="Character Traits Explained" 
+                                title="Protagonist vs Antagonist Explained" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">Character Traits Explained</h3>
-                        <p class="text-sm text-slate-600">Learn how authors develop characters through their traits.</p>
+                        <h3 class="font-bold text-lg mb-1">Protagonist vs Antagonist</h3>
+                        <p class="text-sm text-slate-600">Learn the difference between the hero and the villain in stories.</p>
                     </div>
                 </div>
                 
-                <!-- Video 2 -->
+                <!-- Video 2: Direct vs Indirect -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
-                                title="STEAL Method of Characterization" 
+                                title="Direct vs Indirect Characterization" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">STEAL Method of Characterization</h3>
-                        <p class="text-sm text-slate-600">Speech, Thoughts, Effects on others, Actions, Looks</p>
+                        <h3 class="font-bold text-lg mb-1">Direct vs Indirect Characterization</h3>
+                        <p class="text-sm text-slate-600">How authors reveal characters through telling and showing.</p>
                     </div>
                 </div>
                 
-                <!-- Video 3 -->
+                <!-- Video 3: STEAL Method -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
-                                title="Inside Out - Character Traits" 
+                                title="STEAL Characterization Method" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">Inside Out - Character Traits</h3>
-                        <p class="text-sm text-slate-600">Watch and identify character traits in this Pixar film.</p>
+                        <h3 class="font-bold text-lg mb-1">STEAL Characterization Method</h3>
+                        <p class="text-sm text-slate-600">Speech, Thoughts, Effect, Actions, Looks - the five ways authors show character.</p>
                     </div>
                 </div>
                 
-                <!-- Video 4 -->
+                <!-- Video 4: Movie Examples -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
-                                title="Character Traits Song" 
+                                title="Character Examples in Movies" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">Character Traits Song</h3>
-                        <p class="text-sm text-slate-600">A fun song to remember different character traits.</p>
+                        <h3 class="font-bold text-lg mb-1">Character Examples in Movies</h3>
+                        <p class="text-sm text-slate-600">See protagonists, antagonists, and supporting characters in action.</p>
                     </div>
                 </div>
             </div>
@@ -210,9 +292,9 @@
                 <div class="bg-amber-500 text-white p-2 rounded-lg">
                     <i data-lucide="pen-tool" class="w-6 h-6"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-amber-900">Guided Practice</h2>
+                <h2 class="text-2xl font-bold text-amber-900">Guided Practice: Identify the Character</h2>
             </div>
-            <p class="text-amber-800 mb-4">Complete the practice activities and submit your answers on Google Classroom!</p>
+            <p class="text-amber-800 mb-4">Practice identifying protagonists, antagonists, and using the STEAL method. Complete the activities and submit your answers on Google Classroom!</p>
             <div class="flex flex-wrap gap-3">
                 <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="inline-flex items-center space-x-2 bg-amber-500 text-white px-6 py-3 rounded-full font-bold hover:bg-amber-600 transition action-btn">
                     <i data-lucide="external-link" class="w-5 h-5"></i>
@@ -225,15 +307,24 @@
             </div>
         </section>
         
-        <!-- Character Trait Activity -->
+        <!-- STEAL Analysis Activity -->
         <section class="mb-12 bg-purple-50 rounded-2xl p-6 border-2 border-purple-200">
             <div class="flex items-center space-x-3 mb-4">
                 <div class="bg-purple-500 text-white p-2 rounded-lg">
                     <i data-lucide="star" class="w-6 h-6"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-purple-900">Character Trait Activity</h2>
+                <h2 class="text-2xl font-bold text-purple-900">Character Analysis Activity</h2>
             </div>
-            <p class="text-purple-800 mb-4">Create a character profile using the STEAL method. Include speech, thoughts, effects on others, actions, and looks.</p>
+            <p class="text-purple-800 mb-4">Choose a character from a movie or story you love. Analyze them using the STEAL method:</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-2 mb-4">
+                <div class="bg-white p-2 rounded text-center text-xs font-bold">S: Speech</div>
+                <div class="bg-white p-2 rounded text-center text-xs font-bold">T: Thoughts</div>
+                <div class="bg-white p-2 rounded text-center text-xs font-bold">E: Effect</div>
+                <div class="bg-white p-2 rounded text-center text-xs font-bold">A: Actions</div>
+                <div class="bg-white p-2 rounded text-center text-xs font-bold">L: Looks</div>
+            </div>
+            
             <div class="flex flex-wrap gap-3">
                 <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="inline-flex items-center space-x-2 bg-purple-500 text-white px-6 py-3 rounded-full font-bold hover:bg-purple-600 transition action-btn">
                     <i data-lucide="upload" class="w-5 h-5"></i>
@@ -246,10 +337,10 @@
         <div class="flex justify-between items-center pt-8 border-t border-slate-200">
             <a href="week1.html" class="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition action-btn">
                 <i data-lucide="arrow-left" class="w-5 h-5"></i>
-                <span>Previous Lesson 1</span>
+                <span>← Lesson 1: Conflict</span>
             </a>
             <a href="week3.html" class="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition action-btn">
-                <span>Next Lesson 3</span>
+                <span>Lesson 3: Plot →</span>
                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>
@@ -257,8 +348,8 @@
     
     <footer class="gradient-bg text-white py-8 mt-12">
         <div class="container mx-auto px-4 text-center">
-            <p class="font-semibold">Lesson 2: Character Traits - Grade 7 English Q1</p>
-            <p class="text-sm opacity-80 mt-2">Keep discovering great characters! 📚</p>
+            <p class="font-semibold">Lesson 2: Character & Characterization - Grade 7 English Q1</p>
+            <p class="text-sm opacity-80 mt-2">Understanding characters helps us understand values! 📚</p>
         </div>
     </footer>
     

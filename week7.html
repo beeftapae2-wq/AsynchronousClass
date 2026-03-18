@@ -48,6 +48,14 @@
             border-color: #3b82f6;
         }
         
+        .video-card {
+            transition: all 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
         .selection-card {
             transition: all 0.3s ease;
             cursor: pointer;
@@ -88,8 +96,8 @@
         
         <!-- Assessment Widgets Row -->
         <div class="grid md:grid-cols-3 gap-4 mb-8">
-            <!-- Pre-Test Widget -->
-            <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="assessment-card bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center hover:bg-blue-100 transition block">
+            <!-- PRE-TEST -->
+            <a href="https://forms.gle/81aCySsgk8rxBY1R9" target="_blank" class="assessment-card bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center hover:bg-blue-100 transition block">
                 <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                     <i data-lucide="clipboard-list" class="w-8 h-8"></i>
                 </div>
@@ -98,8 +106,8 @@
                 <span class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Click to Start</span>
             </a>
 
-            <!-- Assessment Widget -->
-            <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="assessment-card bg-purple-50 border-2 border-purple-200 rounded-xl p-6 text-center hover:bg-purple-100 transition block">
+            <!-- ASSESSMENT -->
+            <a href="https://forms.gle/LFFg4ZBQazLmR26v9" target="_blank" class="assessment-card bg-purple-50 border-2 border-purple-200 rounded-xl p-6 text-center hover:bg-purple-100 transition block">
                 <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                     <i data-lucide="edit-3" class="w-8 h-8"></i>
                 </div>
@@ -108,8 +116,8 @@
                 <span class="inline-block bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Click to Start</span>
             </a>
 
-            <!-- Reflection Widget -->
-            <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="assessment-card bg-teal-50 border-2 border-teal-200 rounded-xl p-6 text-center hover:bg-teal-100 transition block">
+            <!-- REFLECTION -->
+            <a href="https://forms.gle/W69dW9TT3FZBVG487" target="_blank" class="assessment-card bg-teal-50 border-2 border-teal-200 rounded-xl p-6 text-center hover:bg-teal-100 transition block">
                 <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                     <i data-lucide="message-circle" class="w-8 h-8"></i>
                 </div>
@@ -138,42 +146,45 @@
                     </span>
                 </div>
             </a>
-            <p class="text-center text-sm text-slate-500 mt-2">Click above to access all your activities in Google Classroom</p>
         </section>
 
-        <!-- Video Resources -->
+        <!-- Video Resources - UPDATED WITH YOUR LINKS -->
         <section class="mb-12">
             <div class="flex items-center space-x-3 mb-6">
                 <div class="bg-red-100 p-2 rounded-lg">
                     <i data-lucide="youtube" class="w-6 h-6 text-red-600"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-slate-800">Video Resources</h2>
+                <h2 class="text-2xl font-bold text-slate-800">🎬 Video Resources</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <!-- Video 1: How to Select Literature -->
+                <div class="video-card bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
-                                title="Choosing the Right Book" 
-                                allowfullscreen>
+                        <iframe src="https://www.youtube.com/embed/pknYBb6gkGw" 
+                                title="How to Select Literature" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy">
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">How to Select Literature</h3>
-                        <p class="text-sm text-slate-600">Strategies for choosing appropriate texts.</p>
+                        <h3 class="font-bold text-lg mb-1 text-rose-700">📖 How to Select Literature</h3>
+                        <p class="text-sm text-slate-600">Strategies for choosing appropriate texts based on meaning and purpose.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <!-- Video 2: Purpose and Audience -->
+                <div class="video-card bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/5A9QevUDFzU" 
+                        <iframe src="https://www.youtube.com/embed/xyH79KQET5E" 
                                 title="Purpose and Audience" 
-                                allowfullscreen>
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy">
                         </iframe>
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">Purpose and Audience</h3>
-                        <p class="text-sm text-slate-600">Understanding why and for whom we read.</p>
+                        <h3 class="font-bold text-lg mb-1 text-blue-700">🎯 Purpose and Audience</h3>
+                        <p class="text-sm text-slate-600">Understanding why and for whom we read and write.</p>
                     </div>
                 </div>
             </div>
@@ -246,10 +257,10 @@
         <div class="flex justify-between items-center pt-8 border-t border-slate-200">
             <a href="week6.html" class="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition action-btn">
                 <i data-lucide="arrow-left" class="w-5 h-5"></i>
-                <span>Previous Lesson 6</span>
+                <span>← Lesson 6: Context</span>
             </a>
             <a href="week8.html" class="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition action-btn">
-                <span>Next Lesson 8</span>
+                <span>Lesson 8: Composition & Revision →</span>
                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>

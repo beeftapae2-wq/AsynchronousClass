@@ -49,6 +49,15 @@
             transform: translateY(-4px);
             box-shadow: 0 25px 30px -5px rgba(99, 102, 241, 0.3);
         }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -71,6 +80,7 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="index.html" class="px-4 py-2 rounded-lg bg-white/20 font-semibold">Home</a>
                     <a href="#lessons" class="px-4 py-2 rounded-lg hover:bg-white/20">Lessons</a>
+                    <a href="#about" class="px-4 py-2 rounded-lg hover:bg-white/20">About Us</a>
                     <a href="#submit" class="px-4 py-2 rounded-lg hover:bg-white/20">Submit</a>
                 </div>
             </div>
@@ -79,6 +89,7 @@
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <a href="index.html" class="block px-4 py-2 rounded-lg bg-white/20 font-semibold mb-2">Home</a>
                 <a href="#lessons" class="block px-4 py-2 rounded-lg hover:bg-white/20 mb-2">Lessons</a>
+                <a href="#about" class="block px-4 py-2 rounded-lg hover:bg-white/20 mb-2">About Us</a>
                 <a href="#submit" class="block px-4 py-2 rounded-lg hover:bg-white/20">Submit</a>
             </div>
         </div>
@@ -320,6 +331,72 @@
         </div>
     </section>
 
+    <!-- About Us Section (NEW) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-600">👥 About Us</h2>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Meet the team behind this Grade 7 English Module</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- James Francis Maniago -->
+                <div class="team-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">JM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">James Francis Maniago</h3>
+                    <p class="text-sm text-blue-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Jhanalyn Cef David -->
+                <div class="team-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">JD</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Jhanalyn Cef David</h3>
+                    <p class="text-sm text-purple-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Wency Mae Alba -->
+                <div class="team-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">WA</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Wency Mae Alba</h3>
+                    <p class="text-sm text-green-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Kenneth Vincent Balivia -->
+                <div class="team-card bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-lg text-center md:col-start-2">
+                    <div class="w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">KB</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Kenneth Vincent Balivia</h3>
+                    <p class="text-sm text-amber-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Earl Troy Anthony Inventor -->
+                <div class="team-card bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-rose-500 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">EI</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Earl Troy Anthony Inventor</h3>
+                    <p class="text-sm text-rose-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10 bg-blue-50 p-6 rounded-2xl max-w-2xl mx-auto">
+                <p class="text-slate-700">
+                    <span class="font-bold text-blue-600">📘 About this project:</span> This interactive e-module was created as a collaborative effort to provide Grade 7 students with an engaging and comprehensive learning experience for English Quarter 1.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Submit Section (Bottom) -->
     <section class="py-12 bg-blue-600">
         <div class="container mx-auto px-4 text-center">
@@ -341,6 +418,9 @@
         <div class="container mx-auto px-4 text-center">
             <p class="mb-2">Grade 7 English Quarter 1 | Interactive E-Module</p>
             <p class="text-sm opacity-60">
+                Created by: James Francis Maniago, Jhanalyn Cef David, Wency Mae Alba, Kenneth Vincent Balivia, Earl Troy Anthony Inventor
+            </p>
+            <p class="text-sm opacity-60 mt-2">
                 <a href="https://www.canva.com/design/DAHCAiVcnEc/0ZIYz5Iplcx8tJaSlzczCQ/view?utm_content=DAHCAiVcnEc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8e67072701" 
                    target="_blank" 
                    class="hover:underline">

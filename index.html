@@ -3,38 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purposive Communication | Asynchronous Class</title>
+    <title>Grade 7 English Quarter 1 | Interactive E-Module</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
         
-        body { font-family: 'Open Sans', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Nunito', sans-serif; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
         
-        .gradient-bg { background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #fbbf24 100%); }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Nunito', sans-serif;
+        }
         
-        .module-card {
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #fbbf24 100%);
+        }
+        
+        .lesson-card {
             transition: all 0.3s ease;
             border: 2px solid transparent;
-            cursor: pointer;
-        }
-        .module-card.locked {
-            background: #f8fafc;
-            filter: grayscale(0.1);
-            opacity: 0.85;
-            cursor: default;
-        }
-        .module-card.unlocked {
-            cursor: pointer;
         }
         
-        .team-card { transition: all 0.3s ease; }
+        .lesson-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+        
+        .action-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .canva-hero-card {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border: 2px solid #ffffff50;
+        }
+        
+        .canva-hero-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 30px -5px rgba(99, 102, 241, 0.3);
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
         .team-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15);
         }
     </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Simple Navigation -->
+    <nav class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2 font-bold text-xl">
+                    <i data-lucide="book-open" class="w-8 h-8"></i>
+                    <span>Grade 7 English Q1</span>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/20 transition">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-white/20 font-semibold">Home</a>
+                    <a href="#lessons" class="px-4 py-2 rounded-lg hover:bg-white/20">Lessons</a>
+                    <a href="#about" class="px-4 py-2 rounded-lg hover:bg-white/20">About Us</a>
+                    <a href="#submit" class="px-4 py-2 rounded-lg hover:bg-white/20">Submit</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block px-4 py-2 rounded-lg bg-white/20 font-semibold mb-2">Home</a>
+                <a href="#lessons" class="block px-4 py-2 rounded-lg hover:bg-white/20 mb-2">Lessons</a>
+                <a href="#about" class="block px-4 py-2 rounded-lg hover:bg-white/20 mb-2">About Us</a>
+                <a href="#submit" class="block px-4 py-2 rounded-lg hover:bg-white/20">Submit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Direct Canva Link -->
+    <header class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block p-3 bg-white/20 rounded-full mb-4">
+                <i data-lucide="book-open" class="w-12 h-12"></i>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Grade 7 English Quarter 1</h1>
+            <p class="text-lg max-w-2xl mx-auto opacity-90 mb-8">
+                Your complete module for the first quarter. Click below to start reading and learning!
+            </p>
+            
+            <!-- Direct Canva Link Button -->
+            <a href="https://www.canva.com/design/DAHCAiVcnEc/0ZIYz5Iplcx8tJaSlzczCQ/view?utm_content=DAHCAiVcnEc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8e67072701" 
+               target="_blank" 
+               class="inline-flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition action-btn shadow-xl text-lg mb-6">
+                <i data-lucide="external-link" class="w-6 h-6"></i>
+                <span>📖 START LEARNING - OPEN MODULE</span>
+            </a>
+            
+            <p class="text-sm opacity-75">Click the button above to access your Canva module. Bookmark it for easy access!</p>
+        </div>
+    </header>
+
+    <!-- Quick Submit Section -->
+    <section id="submit" class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="bg-blue-50 rounded-2xl p-6 border-2 border-blue-200 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-blue-500 text-white p-3 rounded-full">
+                            <i data-lucide="upload-cloud" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-900">Ready to Submit?</h2>
+                            <p class="text-blue-700">Submit all your completed activities here</p>
+                        </div>
+                    </div>
+                    <a href="https://classroom.google.com/c/ODQ3NzUwOTM4MTI5?cjc=3vfsthfe" target="_blank" class="bg-blue-500 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition action-btn flex items-center space-x-2 shadow-lg">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                        <span>OPEN GOOGLE CLASSROOM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Preview Card -->
+    <section class="py-8">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <a href="https://www.canva.com/design/DAHCAiVcnEc/0ZIYz5Iplcx8tJaSlzczCQ/view?utm_content=DAHCAiVcnEc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8e67072701" 
+               target="_blank"
+               class="canva-hero-card block bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-white/20 p-4 rounded-2xl">
+                            <i data-lucide="palette" class="w-12 h-12"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold mb-1">📘 Grade 7 English Module</h2>
+                            <p class="opacity-90">Full Quarter 1 Module - Click to open in Canva</p>
+                        </div>
+                    </div>
+                    <span class="bg-white text-indigo-600 px-6 py-3 rounded-full font-bold flex items-center space-x-2">
+                        <span>Open Module</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Weekly Lessons Section (8 Lessons Only) -->
+    <section id="lessons" class="py-12 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-blue-600">📚 All Lessons</h2>
+            <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">Click on any lesson below to access specific activities and resources.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Lesson 1 -->
+                <a href="week1.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-red-400 to-pink-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 1</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="swords" class="w-5 h-5 text-red-500 mr-2"></i>
+                            Conflict
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Protagonist vs Antagonist and types of conflict in literature.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 1 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 2 -->
+                <a href="week2.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 2</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="users" class="w-5 h-5 text-blue-500 mr-2"></i>
+                            Character & Characterization
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Direct vs Indirect characterization and the STEAL method.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 2 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 3 -->
+                <a href="week3.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 3</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="line-chart" class="w-5 h-5 text-green-500 mr-2"></i>
+                            Plot, Rhyme & Meter
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Story structure, poetic devices, and diction analysis.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 3 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 4 -->
+                <a href="week4.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-purple-400 to-violet-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 4</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="cloud-sun" class="w-5 h-5 text-purple-500 mr-2"></i>
+                            Tone, Mood, Style
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Understanding atmosphere and recurring motifs in texts.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 4 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 5 -->
+                <a href="week5.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 5</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-amber-500 mr-2"></i>
+                            Figures of Speech
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Point of view and universal truths in literature.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 5 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 6 -->
+                <a href="week6.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 6</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="globe" class="w-5 h-5 text-cyan-500 mr-2"></i>
+                            Biographical & Historical Context
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Sociocultural influences on literary works.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 6 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 7 -->
+                <a href="week7.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-rose-400 to-red-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 7</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="search" class="w-5 h-5 text-rose-500 mr-2"></i>
+                            Selecting Literary Text
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Purpose, audience, and theme selection strategies.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 7 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 8 -->
+                <a href="week8.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-indigo-400 to-purple-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 8</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="pen-tool" class="w-5 h-5 text-indigo-500 mr-2"></i>
+                            Composition & Revision
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Writing techniques and editing strategies.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 8 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Note about number of lessons -->
+            <p class="text-center text-slate-500 mt-6 text-sm">8 lessons available for Quarter 1</p>
+        </div>
+    </section>
+
+    <!-- About Us Section (NEW) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-600">👥 About Us</h2>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Meet the team behind this Grade 7 English Module</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- James Francis Maniago -->
+                <div class="team-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">JM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">James Francis Maniago</h3>
+                    <p class="text-sm text-blue-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Jhanalyn Cef David -->
+                <div class="team-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-f        </div>
+    </section>
+
+    <!-- Module Preview Card -->
+    <section class="py-8">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <a href="https://www.canva.com/design/DAHCAiVcnEc/0ZIYz5Iplcx8tJaSlzczCQ/view?utm_content=DAHCAiVcnEc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8e67072701" 
+               target="_blank"
+               class="canva-hero-card block bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-white/20 p-4 rounded-2xl">
+                            <i data-lucide="palette" class="w-12 h-12"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold mb-1">📘 Grade 7 English Module</h2>
+                            <p class="opacity-90">Full Quarter 1 Module - Click to open in Canva</p>
+                        </div>
+                    </div>
+                    <span class="bg-white text-indigo-600 px-6 py-3 rounded-full font-bold flex items-center space-x-2">
+                        <span>Open Module</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Weekly Lessons Section (8 Lessons Only) -->
+    <section id="lessons" class="py-12 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-blue-600">📚 All Lessons</h2>
+            <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">Click on any lesson below to access specific activities and resources.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Lesson 1 -->
+                <a href="week1.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-red-400 to-pink-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 1</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="swords" class="w-5 h-5 text-red-500 mr-2"></i>
+                            Conflict
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Protagonist vs Antagonist and types of conflict in literature.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 1 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 2 -->
+                <a href="week2.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 2</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="users" class="w-5 h-5 text-blue-500 mr-2"></i>
+                            Character & Characterization
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Direct vs Indirect characterization and the STEAL method.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 2 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 3 -->
+                <a href="week3.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 3</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="line-chart" class="w-5 h-5 text-green-500 mr-2"></i>
+                            Plot, Rhyme & Meter
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Story structure, poetic devices, and diction analysis.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 3 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 4 -->
+                <a href="week4.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-purple-400 to-violet-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 4</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="cloud-sun" class="w-5 h-5 text-purple-500 mr-2"></i>
+                            Tone, Mood, Style
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Understanding atmosphere and recurring motifs in texts.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 4 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 5 -->
+                <a href="week5.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 5</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-amber-500 mr-2"></i>
+                            Figures of Speech
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Point of view and universal truths in literature.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 5 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 6 -->
+                <a href="week6.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 6</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="globe" class="w-5 h-5 text-cyan-500 mr-2"></i>
+                            Biographical & Historical Context
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Sociocultural influences on literary works.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 6 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 7 -->
+                <a href="week7.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-rose-400 to-red-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 7</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="search" class="w-5 h-5 text-rose-500 mr-2"></i>
+                            Selecting Literary Text
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Purpose, audience, and theme selection strategies.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 7 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Lesson 8 -->
+                <a href="week8.html" class="lesson-card bg-white rounded-xl shadow-md overflow-hidden block">
+                    <div class="h-24 bg-gradient-to-r from-indigo-400 to-purple-500 flex items-center justify-between px-6">
+                        <span class="text-white font-bold text-lg">Lesson 8</span>
+                        <i data-lucide="external-link" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i data-lucide="pen-tool" class="w-5 h-5 text-indigo-500 mr-2"></i>
+                            Composition & Revision
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Writing techniques and editing strategies.</p>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-blue-600 font-semibold">Open Lesson 8 →</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs">Available</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Note about number of lessons -->
+            <p class="text-center text-slate-500 mt-6 text-sm">8 lessons available for Quarter 1</p>
+        </div>
+    </section>
+
+    <!-- About Us Section (NEW) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-600">👥 About Us</h2>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Meet the team behind this Grade 7 English Module</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- James Francis Maniago -->
+                <div class="team-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-white text-3xl font-bold">JM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">James Francis Maniago</h3>
+                    <p class="text-sm text-blue-600 font-semibold mb-3">Team Member</p>
+                    <p class="text-sm text-slate-600">Contributor to module development and content creation</p>
+                </div>
+                
+                <!-- Jhanalyn Cef David -->
+                <div class="team-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-f    </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
